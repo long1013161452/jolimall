@@ -1,0 +1,82 @@
+//
+//  RInstagramManager.m
+//  sharekit
+//
+//  Created by valenti on 2018/6/1.
+//  Copyright © 2018 rex. All rights reserved.
+//
+
+#import "RInstagramManager.h"
+#import "RPlatform.h"
+
+
+@implementation RInstagramManager
+
+static RInstagramManager* _instance = nil;
+
++ (instancetype)shared {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [[[self class] alloc] init];
+    });
+    return _instance;
+}
++ (instancetype)allocWithZone:(struct _NSZone *)zone
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _instance = [super allocWithZone:zone];
+    });
+    return _instance;
+}
+- (void)connect:(RConfiguration)c {
+    c(RShareSDKInstagram, [RRegister shared]);
+}
+
+static NSURL* instagramLibraryURL() {
+    NSString *str = [NSString stringWithFormat:@"instagram://library?AssetPath=%@", @"https://www.baidu.com"];
+    return [NSURL URLWithString:str];
+}
+
+- (void)share:(UIImage *)image {
+    
+    if (![RPlatform isInstalled:RShareSDKInstagram]) {
+        NSLog(@"Instagram 未安装");
+        return;
+    }
+    
+    
+
+    /**
+     * 先保存到系统相册, 再跳转 Instagram 应用分享.
+     **/
+    UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), (__bridge void *)self);
+}
+
+- (void)shareVideoWithLocalURL:(NSURL *)localeVideoURL
+                    description:(NSString *)description{
+
+    UISaveVideoAtPathToSavedPhotosAlbum(localeVideoURL.path, self, @selector(video:didFinishSavingWithError:contextInfo:), nil);
+
+}
+
+/**
+ * 视频保存成功.
+ */
+- (void)video:(NSString *)path didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
+    
+    if ([[UIApplication sharedApplication] canOpenURL:instagramLibraryURL()]) {
+        [[UIApplication sharedApplication] openURL:instagramLibraryURL()];
+    }
+}
+/**
+ * 照片保存成功.
+ */
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+    if ([[UIApplication sharedApplication] canOpenURL:instagramLibraryURL()]) {
+        [[UIApplication sharedApplication] openURL:instagramLibraryURL()];
+    }
+}
+
+@end

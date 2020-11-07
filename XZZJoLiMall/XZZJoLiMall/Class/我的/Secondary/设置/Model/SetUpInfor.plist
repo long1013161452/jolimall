@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>About Jolimal</string>
+		<key>httpUrl</key>
+		<string>About Jolimall</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Payment Methods</string>
+		<key>httpUrl</key>
+		<string>Payment Methods</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Shipping Policy</string>
+		<key>httpUrl</key>
+		<string>Shipping Policy</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Return&amp;Refund Policy</string>
+		<key>httpUrl</key>
+		<string>Return&amp;Refund Policy</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Contact us</string>
+		<key>httpUrl</key>
+		<string>Contact us</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Jolimall partner Affiliate Platforms</string>
+		<key>httpUrl</key>
+		<string>Jolimall partner Affiliate Platforms</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Privacy Policy</string>
+		<key>httpUrl</key>
+		<string>Privacy Policy</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Terms of Conditions</string>
+		<key>httpUrl</key>
+		<string>Terms of Conditions</string>
+	</dict>
+</array>
+</plist>

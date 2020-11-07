@@ -1,0 +1,63 @@
+platform :ios, "9.0"
+
+install! 'cocoapods', :deterministic_uuids => false
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+target ‘XZZJoLiMall’ do
+#    use_frameworks!
+
+pod 'AWSKinesis'
+pod 'AFNetworking'#数据下载
+pod 'FBSDKCoreKit'#, '~> 4.44.0'  #Facebook  埋点
+pod 'FBSDKLoginKit'#, '~> 4.44.0' #Facebook 登录
+pod 'FBSDKShareKit'#, '~> 4.44.0'#Facebook  分享
+pod 'FBSDKMessengerShareKit'# Facebook messenger 分享
+pod 'Firebase/Core'#Firebase 埋点
+pod 'Firebase/Messaging'
+pod 'Firebase/Crash'
+pod 'Fabric'
+pod 'Crashlytics', '~> 3.13.4'#崩溃收集
+pod 'HUPhotoBrowser'#图片浏览器
+pod 'IQKeyboardManager'#处理键盘    不会遮挡输入框
+pod 'Masonry'#约束
+pod 'MJRefresh'#下拉刷新上拉加载
+pod 'PinterestSDK'#Pinterest 分享
+pod 'Stripe'#Stripe支付的
+pod 'SVProgressHUD'#提示框    定时消失
+pod 'YYModel'#数据解析
+
+pod 'ZDCChat/API'#实时聊天
+#pod 'ZDCChat'#实时聊天
+pod 'ZendeskSDK'
+
+
+end
+
+target ‘XZZJoLiMallTest’ do
+#    use_frameworks!
+    
+    pod 'AWSKinesis'
+    pod 'AFNetworking'#数据下载
+    pod 'FBSDKCoreKit'#, '~> 4.38.0'  #Facebook  埋点
+    pod 'FBSDKLoginKit'#, '~> 4.38.0' #Facebook 登录
+    pod 'FBSDKShareKit'#, '~> 4.38.0'#Facebook  分享
+    pod 'FBSDKMessengerShareKit'# Facebook messenger 分享
+    pod 'Firebase/Core'#Firebase 埋点
+    pod 'Firebase/Messaging'
+    pod 'Firebase/Crash'
+    pod 'Fabric'
+    pod 'Crashlytics','~> 3.13.4' #崩溃收集
+    pod 'HUPhotoBrowser'#图片浏览器
+    pod 'IQKeyboardManager'#处理键盘    不会遮挡输入框
+    pod 'Masonry'#约束
+    pod 'MJRefresh'#下拉刷新上拉加载
+    pod 'PinterestSDK'#Pinterest 分享
+    pod 'Stripe'#Stripe支付的
+    pod 'SVProgressHUD'#提示框    定时消失
+    pod 'YYModel'#数据解析
+    pod 'ZDCChat/API'#实时聊天
+    pod 'ZendeskSDK'
+
+    
+end

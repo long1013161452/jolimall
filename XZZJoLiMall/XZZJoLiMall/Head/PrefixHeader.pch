@@ -1,0 +1,111 @@
+//
+//  PrefixHeader.pch
+//  XZZJoLiMall
+//
+//  Created by 龙少 on 2019/1/4.
+//  Copyright © 2019年 龙少. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <AuthenticationServices/AuthenticationServices.h>
+#import <WebKit/WebKit.h>
+
+#import "XZZDefine.h"
+#import "XZZHeaderUrl.h"
+#import "XZZHeader.h"
+#import "XZZDeviceHeader.h"
+
+
+
+/**
+ *  数据仓库
+ */
+#import <AWSKinesis/AWSKinesis.h>
+
+/**
+ * 约束第三方
+ */
+#import <Masonry/Masonry.h>
+/**
+ * 下拉刷新上拉加载
+ */
+#import <MJRefresh/MJRefresh.h>
+/**
+ * 图片加载
+ */
+#import "UIImageView+WebCache.h"
+#import "NSButton+WebCache.h"
+#import "UIButton+WebCache.h"
+#import "FLAnimatedImageView.h"
+#import "FLAnimatedImageView+WebCache.h"
+/**
+ * 网络请求
+ */
+#import <AFNetworking/AFNetworking.h>
+/**
+ * 图片浏览器
+ */
+#import <HUPhotoBrowser/HUPhotoBrowser.h>
+/**
+ * 数据解析
+ */
+#import <YYModel/YYModel.h>
+/**
+ * 提示框  定时消失
+ */
+#import <SVProgressHUD/SVProgressHUD.h>
+/**
+ * Facebook 登录
+ */
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <FBSDKShareKit/FBSDKShareKit.h>
+
+#import "SDCycleScrollView.h"
+/**
+ * 支付的  Stripe
+ */
+#import <Stripe/Stripe.h>
+
+/**
+ *  埋点
+ */
+//#import <GoogleAnalytics/GAI.h>
+//#import <GoogleAnalytics/GAIDictionaryBuilder.h>
+//#import <GoogleAnalytics/GAIFields.h>
+/**
+ *  埋点
+ */
+#import <Firebase/Firebase.h>
+
+
+#import <PinterestSDK/PinterestSDK.h>
+
+#import "RFacebookManager.h"
+#import "RPinterestManager.h"
+#import "RShareManager.h"
+#import "RWhatsAppManager.h"
+#import "RFBMessenger.h"
+#import "RFacebookManager.h"
+
+/**
+ *  工单
+ */
+//#import "ZDCChatAPI.h"
+#import <ZDCChatAPI/ZDCChatAPI.h>
+//#import <ZDCChat/ZDCChat.h>
+#import <ZendeskSDK/ZendeskSDK.h>
+#import <ZendeskProviderSDK/ZendeskProviderSDK.h>
+#import <ZendeskCoreSDK/ZendeskCoreSDK.h>
+
+#import "AppDelegate.h"
+
+#endif /* PrefixHeader_pch */
